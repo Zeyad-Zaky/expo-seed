@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component }from 'react';
 import {
     View, 
     Text,
@@ -9,26 +9,28 @@ import {
     TextInput
 } from 'react-native';
 
-const LoginScreen = () => {
-    return (
-        <View style={styles.container}>
-            <ImageBackground source={require('../../../assets/loginPage/BG.png')} style={styles.background} imageStyle={styles.backgroundImage}>
-                <Text style={styles.title}>Sign In</Text>
-                <Image source={require('../../../assets/loginPage/KOTTENORA.png')} style={styles.image}></Image>
-                <View style={styles.inputSection}>
-                    <Image source={require('../../../assets/loginPage/usernameIcon.png')} style={styles.usernameIcon}></Image>
-                    <TextInput placeholder="username" placeholderTextColor='white' style={styles.input}></TextInput>
-                </View>
-                <View style={styles.inputSection}>
-                    <Image source={require('../../../assets/loginPage/passwordIcon.png')} style={styles.passwordIcon}></Image>
-                    <TextInput placeholder="password" placeholderTextColor='white' style={styles.input}></TextInput>
-                </View>
-                <TouchableOpacity>
-                    <Image source={require('../../../assets/loginPage/button.png')} style={styles.button}></Image>
-                </TouchableOpacity>
-            </ImageBackground>
-        </View>
-    );
+class LoginScreen extends Component {
+        render() {
+        return (
+            <View style={styles.container}>
+                <ImageBackground source={require('../../../assets/loginPage/BG.png')} style={styles.background} imageStyle={styles.backgroundImage}>
+                    <Text style={styles.title}>Sign In</Text>
+                    <Image source={require('../../../assets/loginPage/KOTTENORA.png')} style={styles.image}></Image>
+                    <View style={styles.inputSection}>
+                        <Image source={require('../../../assets/loginPage/usernameIcon.png')} style={styles.usernameIcon}></Image>
+                        <TextInput placeholder="username" placeholderTextColor='white' style={styles.input}></TextInput>
+                    </View>
+                    <View style={styles.inputSection}>
+                        <Image source={require('../../../assets/loginPage/passwordIcon.png')} style={styles.passwordIcon}></Image>
+                        <TextInput placeholder="password" placeholderTextColor='white' style={styles.input}></TextInput>
+                    </View>
+                    <TouchableOpacity>
+                        <Image source={require('../../../assets/loginPage/button.png')} style={styles.button}></Image>
+                    </TouchableOpacity>
+                </ImageBackground>
+            </View>
+        );
+    }
 };
 
 const styles = StyleSheet.create({

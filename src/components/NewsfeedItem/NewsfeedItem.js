@@ -2,7 +2,7 @@ import React from "react";
 import {StyleSheet, TouchableOpacity, Image, ImageBackground, Text, View} from "react-native";
 
 const NewsfeedItem = props => (
-  <TouchableOpacity>
+  <TouchableOpacity disbaled={true}>
     <ImageBackground source={require('../../assets/newsfeedPage/ContainerNewsfeed.png')} style={styles.newsfeedItem} imageStyle={styles.newsfeedItemImage}>
         {/* <Image source={require('../../assets/newsfeedPage/Pic.png')} style={styles.newsfeedPicture}/> */}
         <Text style={styles.newsfeedTitle}>{props.title}</Text>

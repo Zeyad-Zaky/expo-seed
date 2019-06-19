@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component }from 'react';
 import {
     View,
     Text,
@@ -10,7 +10,7 @@ import {
 
 import NewsfeedList from '../../NewsfeedList/NewsfeedList';
 
-const NewsfeedScreen = () => {
+class NewsfeedScreen extends Component {
     state = {
         userName: 'Zeyad_Zaky',
         newsfeed: [
@@ -42,35 +42,37 @@ const NewsfeedScreen = () => {
         ]
     };
 
-    return (
-        <View style={styles.container}>
-            <ImageBackground source={require('../../../assets/newsfeedPage/BG.png')} style={styles.background} imageStyle={styles.backgroundImage}>
-                <View style={styles.topBar}>
-                    <TouchableOpacity> 
-                        <Image source={require('../../../assets/newsfeedPage/MENU.png')} style={styles.menu}></Image>
-                    </TouchableOpacity>
-                    <ImageBackground source={require('../../../assets/newsfeedPage/PlayerCard.png')} style={styles.playercard} imageStyle={styles.playercardImage}>
-                        <Image source={require('../../../assets/newsfeedPage/PICFrame.png')} style={styles.profilepicture}></Image>
-                        <Text style={styles.username}>{this.state.userName}</Text>
-                    </ImageBackground>
-                </View>
-                <View style={styles.newsfeed}>
-                    <NewsfeedList newsfeed={this.state.newsfeed}/>
-                </View>
-                <View style={styles.navbar}>
-                    <TouchableOpacity>
-                        <Image source={require('../../../assets/newsfeedPage/Rank_nav.png')} style={styles.navItem}></Image>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image source={require('../../../assets/newsfeedPage/Earth_nav.png')} style={styles.navItem}></Image>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image source={require('../../../assets/newsfeedPage/FootballCourt_nav.png')} style={styles.navItem}></Image>
-                    </TouchableOpacity>
-                </View>
-            </ImageBackground>
-        </View>
-    );
+    render() {
+        return (
+            <View style={styles.container}>
+                <ImageBackground source={require('../../../assets/newsfeedPage/BG.png')} style={styles.background} imageStyle={styles.backgroundImage}>
+                    <View style={styles.topBar}>
+                        <TouchableOpacity> 
+                            <Image source={require('../../../assets/newsfeedPage/MENU.png')} style={styles.menu}></Image>
+                        </TouchableOpacity>
+                        <ImageBackground source={require('../../../assets/newsfeedPage/PlayerCard.png')} style={styles.playercard} imageStyle={styles.playercardImage}>
+                            <Image source={require('../../../assets/newsfeedPage/PICFrame.png')} style={styles.profilepicture}></Image>
+                            <Text style={styles.username}>{this.state.userName}</Text>
+                        </ImageBackground>
+                    </View>
+                    <View style={styles.newsfeed}>
+                        <NewsfeedList newsfeed={this.state.newsfeed}/>
+                    </View>
+                    <View style={styles.navbar}>
+                        <TouchableOpacity>
+                            <Image source={require('../../../assets/newsfeedPage/Rank_nav.png')} style={styles.navItem}></Image>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Image source={require('../../../assets/newsfeedPage/Earth_nav.png')} style={styles.navItem}></Image>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Image source={require('../../../assets/newsfeedPage/FootballCourt_nav.png')} style={styles.navItem}></Image>
+                        </TouchableOpacity>
+                    </View>
+                </ImageBackground>
+            </View>
+        );
+    }
 };
 
 const styles = StyleSheet.create({
