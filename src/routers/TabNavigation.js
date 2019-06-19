@@ -1,21 +1,19 @@
-import { createBottomTabNavigator } from 'react-navigation';
+import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
 import colors from 'styles/colors';
 import Screen from 'components/Screen';
 
-
-const TabNavigation = createBottomTabNavigator(
+const TabNavigation = createStackNavigator(
   {
-    main: {screen: Screen}
-  },
-  {
-
-    lazy: true,
-    tabBarOptions: {
-      showLabel: false,
-      activeTintColor: colors.purple,
-      inactiveTintColor: colors.purple,
-    },
+    main: { screen: Screen },
   }
+  // {
+  //   lazy: true,
+  //   tabBarOptions: {
+  //     showLabel: false,
+  //     activeTintColor: colors.purple,
+  //     inactiveTintColor: colors.purple,
+  //   },
+  // }
 );
 
 export default TabNavigation;

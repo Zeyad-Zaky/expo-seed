@@ -1,6 +1,5 @@
-import React from "react";
-import { StyleSheet, FlatList, View } from "react-native";
-
+import React from 'react';
+import { StyleSheet, FlatList, View } from 'react-native';
 import NewsfeedItem from '../NewsfeedItem/NewsfeedItem';
 
 const NewsfeedList = props => {
@@ -8,18 +7,16 @@ const NewsfeedList = props => {
     <FlatList
       style={styles.listContainer}
       data={props.newsfeed}
-      renderItem={(info) => (
-        <NewsfeedItem title={info.item.title} news={info.item.news}/>
-      )}
-    /> 
+      renderItem={info => <NewsfeedItem title={info.item.title} news={info.item.news} />}
+    />
   );
 };
 
 const styles = StyleSheet.create({
   listContainer: {
-    width: "100%",
-    height: '100%'
-  }
+    width: '100%',
+    height: '100%',
+  },
 });
 
 export default NewsfeedList;
