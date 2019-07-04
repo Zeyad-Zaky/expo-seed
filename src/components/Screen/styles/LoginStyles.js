@@ -11,7 +11,6 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
-
   image: {
     margin: '20%',
     marginBottom: '2%',
