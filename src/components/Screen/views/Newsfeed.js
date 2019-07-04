@@ -61,21 +61,21 @@ class NewsfeedScreen extends Component {
               imageStyle={styles.playercardImage}
             >
               <Image source={PIC_FRAME_LOGO} style={styles.profilepicture}></Image>
-              <Text style={styles.username}>{NewsfeedScreen.state.userName}</Text>
+              <Text style={styles.username}>{this.NewsfeedScreenstate.userName}</Text>
             </ImageBackground>
           </View>
           <View style={styles.newsfeed}>
-            <NewsfeedList newsfeed={NewsfeedScreen.state.newsfeed} />
+            <NewsfeedList newsfeed={this.NewsfeedScreenstate.newsfeed} />
           </View>
           <View style={styles.navbar}>
             <TouchableOpacity>
               <Image source={RANK_NAV_ICON} style={styles.navItem}></Image>
             </TouchableOpacity>
             <TouchableOpacity>
-              <Image source={EARTH_NAV_ICON} style={styles.navItem}></Image>
+              <Image source={EARTH_NAV_ICON} style={styles.earthItem}></Image>
             </TouchableOpacity>
             <TouchableOpacity>
-              <Image source={FOOTBALLCOURT_NAV_ICON} style={styles.navItem}></Image>
+              <Image source={FOOTBALLCOURT_NAV_ICON} style={styles.footballCourt}></Image>
             </TouchableOpacity>
           </View>
         </ImageBackground>

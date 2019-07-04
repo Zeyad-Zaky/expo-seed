@@ -9,9 +9,11 @@ export default StyleSheet.create({
   background: {
     width: '100%',
     height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   backgroundImage: {
-    resizeMode: 'stretch',
+   resizeMode: 'stretch',
   },
   topBar: {
     maxHeight: '12%',
@@ -29,11 +31,11 @@ export default StyleSheet.create({
     resizeMode: 'stretch',
   },
   playercard: {
-    width: '80%',
-    height: '100%',
+    width: '90%',
+    height: '110%',
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'flex-start',
   },
   playercardImage: {
@@ -69,7 +71,19 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   navItem: {
-    marginRight: '25%',
+    marginRight: '20%',
     resizeMode: 'stretch',
   },
+  earthItem: {
+    marginRight: '20%',
+    width: 50,
+    height: 50,
+    resizeMode: 'stretch',
+  },
+  footballCourt: {
+    marginRight: '20%',
+    width: 50,
+    height: 37,
+    resizeMode: 'stretch',
+  }
 });
