@@ -99,4 +99,16 @@ export default StyleSheet.create({
     marginRight: '25%',
     resizeMode: 'stretch',
   },
+  earthItem: {
+    marginRight: '20%',
+    width: 50,
+    height: 50,
+    resizeMode: 'stretch',
+  },
+  footballCourt: {
+    marginRight: '20%',
+    width: 50,
+    height: 37,
+    resizeMode: 'stretch',
+  },
 });

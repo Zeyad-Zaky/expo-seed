@@ -100,13 +100,13 @@ class MatchScreen extends Component {
             <TouchableOpacity>
               <Image
                 source={require('../../../assets/newsfeedPage/Earth_nav.png')}
-                style={styles.navItem}
+                style={styles.earthItem}
               ></Image>
             </TouchableOpacity>
             <TouchableOpacity>
               <Image
                 source={require('../../../assets/newsfeedPage/FootballCourt_nav.png')}
-                style={styles.navItem}
+                style={styles.footballCourt}
               ></Image>
             </TouchableOpacity>
           </View>
