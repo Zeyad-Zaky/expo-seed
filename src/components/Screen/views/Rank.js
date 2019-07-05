@@ -48,47 +48,78 @@ class RankScreen extends Component {
 
   render() {
     return (
-            <View style={styles.container}>
-                <ImageBackground source={require('../../../assets/newsfeedPage/BG.png')} style={styles.background} >
-                    <View style={styles.topBar}>
-                        <TouchableOpacity> 
-                            <Image source={require('../../../assets/newsfeedPage/MENU.png')} style={styles.menu}></Image>
-                        </TouchableOpacity>
-                        <ImageBackground source={require('../../../assets/newsfeedPage/PlayerCard.png')} style={styles.playercard} imageStyle={styles.playercardImage}>
-                            <Image source={require('../../../assets/newsfeedPage/PICFrame.png')} style={styles.profilepicture}></Image>
-                            <Text style={styles.username}>{this.state.userName}</Text>
-                        </ImageBackground>
-                    </View>
-                    <View style={styles.optionsBar}>
-                        <TouchableOpacity>
-                            <Image source={require('../../../assets/rankPage/Button1.png')} style={styles.optionsItem}></Image>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={require('../../../assets/rankPage/Button2.png')} style={styles.optionsItem}></Image>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={require('../../../assets/rankPage/Button3.png')} style={styles.optionsItem}></Image>
-                        </TouchableOpacity>
-                    </View>
-                    <Image source={require('../../../assets/rankPage/Map.png')} style={styles.map}></Image>
-                    <View style={styles.leaderboard}>
-                        <LeaderboardList leaderboard={this.state.leaderboard}></LeaderboardList>
-                    </View>
-                    <View style={styles.navbar}>
-                        <TouchableOpacity>
-                            <Image source={require('../../../assets/newsfeedPage/Rank_nav.png')} style={styles.navItem}></Image>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={require('../../../assets/newsfeedPage/Earth_nav.png')} style={styles.navItem}></Image>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={require('../../../assets/newsfeedPage/FootballCourt_nav.png')} style={styles.navItem}></Image>
-                        </TouchableOpacity>
-                    </View>
-                </ImageBackground>
-            </View>
-        );
-    }
+      <View style={styles.container}>
+        <ImageBackground
+          source={require('../../../assets/newsfeedPage/BG.png')}
+          style={styles.background}
+        >
+          <View style={styles.topBar}>
+            <TouchableOpacity>
+              <Image
+                source={require('../../../assets/newsfeedPage/MENU.png')}
+                style={styles.menu}
+              ></Image>
+            </TouchableOpacity>
+            <ImageBackground
+              source={require('../../../assets/newsfeedPage/PlayerCard.png')}
+              style={styles.playercard}
+              imageStyle={styles.playercardImage}
+            >
+              <Image
+                source={require('../../../assets/newsfeedPage/PICFrame.png')}
+                style={styles.profilepicture}
+              ></Image>
+              <Text style={styles.username}>{this.state.userName}</Text>
+            </ImageBackground>
+          </View>
+          <View style={styles.optionsBar}>
+            <TouchableOpacity>
+              <Image
+                source={require('../../../assets/rankPage/Button1.png')}
+                style={styles.optionsItem}
+              ></Image>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                source={require('../../../assets/rankPage/Button2.png')}
+                style={styles.optionsItem}
+              ></Image>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                source={require('../../../assets/rankPage/Button3.png')}
+                style={styles.optionsItem}
+              ></Image>
+            </TouchableOpacity>
+          </View>
+          <Image source={require('../../../assets/rankPage/Map.png')} style={styles.map}></Image>
+          <View style={styles.leaderboard}>
+            <LeaderboardList leaderboard={this.state.leaderboard}></LeaderboardList>
+          </View>
+          <View style={styles.navbar}>
+            <TouchableOpacity>
+              <Image
+                source={require('../../../assets/newsfeedPage/Rank_nav.png')}
+                style={styles.navItem}
+              ></Image>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                source={require('../../../assets/newsfeedPage/Earth_nav.png')}
+                style={styles.navItem}
+              ></Image>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                source={require('../../../assets/newsfeedPage/FootballCourt_nav.png')}
+                style={styles.navItem}
+              ></Image>
+            </TouchableOpacity>
+          </View>
+        </ImageBackground>
+      </View>
+    );
+  }
 }
 
 export default RankScreen;
