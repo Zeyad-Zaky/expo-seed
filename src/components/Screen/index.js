@@ -1,5 +1,5 @@
 import React from 'react';
-import ScreenScreen from './views/Newsfeed';
+import ScreenScreen from './views/CreateMatch';
 
 export const Screen = () => {
   return <ScreenScreen />;
