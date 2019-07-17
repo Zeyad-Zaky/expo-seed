@@ -1,38 +1,38 @@
 module.exports = {
-  extends: ["airbnb", "prettier", "prettier/react"],
-  parser: "babel-eslint",
+  extends: ['airbnb', 'prettier', 'prettier/react'],
+  parser: 'babel-eslint',
   rules: {
-    "react/jsx-filename-extension": [
+    'react/jsx-filename-extension': [
       1,
       {
-        extensions: [".js", ".jsx"]
-      }
+        extensions: ['.js', '.jsx'],
+      },
     ],
-    "react/jsx-no-bind": [
+    'react/jsx-no-bind': [
       1,
       {
         ignoreDOMComponents: false,
         ignoreRefs: false,
         allowArrowFunctions: false,
-        allowBind: false
-      }
+        allowBind: false,
+      },
     ],
-    "prettier/prettier": [
-      "error",
+    'prettier/prettier': [
+      'error',
       {
-        trailingComma: "es5",
+        trailingComma: 'es5',
         singleQuote: true,
-        printWidth: 100
-      }
-    ]
+        printWidth: 100,
+      },
+    ],
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        paths: ["src"]
+        paths: ['src'],
       },
-      "babel-module": {}
-    }
+      'babel-module': {},
+    },
   },
-  plugins: ["prettier"]
+  plugins: ['prettier'],
 };
