@@ -1,10 +1,9 @@
 import React from 'react';
-import ScreenScreen from './views/Login';
+import ScreenScreen from './views/QRCodeScanner';
 
-export class Screen extends React.Component {
-  render() {
-    return <ScreenScreen />;
-  }
-}
+
+export const Screen = () => {
+  return <ScreenScreen />;
+};
 
 export default Screen;
