@@ -15,23 +15,7 @@ export default StyleSheet.create({
   backgroundImage: {
     resizeMode: 'stretch',
   },
-  topBar: {
-    maxHeight: '12%',
-    marginBottom: '8%',
-    // marginTop: '10%',
-    // width: '100%',
-    // flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-  },
-  menu: {
-    marginLeft: '20%',
-    marginTop: '20%',
-    width: '50%',
-    height: '50%',
-    resizeMode: 'stretch',
-  },
+
   playercard: {
     width: '90%',
     height: '110%',
@@ -88,7 +72,7 @@ export default StyleSheet.create({
     height: 37,
     resizeMode: 'stretch',
   },
-  qrcodeFrame:{
+  qrcodeFrame: {
     // width: '50%',
     // height: '50%',
     maxWidth: '75%',
@@ -97,7 +81,7 @@ export default StyleSheet.create({
     marginTop: '20%',
     position: 'relative',
   },
-  qrcode:{
+  qrcode: {
     // width: '70%',
     // height: '70%',
     maxWidth: '50%',
@@ -106,5 +90,5 @@ export default StyleSheet.create({
     marginLeft: '6%',
     marginTop: '25%',
     position: 'absolute',
-  }
+  },
 });
