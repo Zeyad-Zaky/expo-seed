@@ -144,7 +144,6 @@ export default StyleSheet.create({
 
   },
   navbar: {
-    marginLeft: '15%',
     maxHeight: '10%',
     flex: 1,
     flexDirection: 'row',
@@ -152,19 +151,11 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   navItem: {
+    width: '100%',
+    maxWidth: '100%',
+    maxHeight: '100%',
     marginRight: '20%',
-    resizeMode: 'stretch',
-  },
-  earthItem: {
-    marginRight: '20%',
-    width: 50,
-    height: 50,
-    resizeMode: 'stretch',
-  },
-  footballCourt: {
-    marginRight: '20%',
-    width: 50,
-    height: 37,
-    resizeMode: 'stretch',
+    resizeMode: 'contain',
+    
   }
 });

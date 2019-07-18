@@ -3,6 +3,7 @@ import { AppRegistry, View, Text, ImageBackground, TouchableOpacity, Image } fro
 import styles from '../styles/CreateMatchStyles';
 import { Button } from 'react-native';
 import { Font, AppLoading } from "expo";
+import NavBar from '../../../reusable/NavBar';
 
 
 const BACKGROUND = require('assets/createMatchPage/BG.png');
@@ -23,6 +24,11 @@ const DAYCONTAINER = require('assets/createMatchPage/Daycontainer.png');
 const DAYGLOW = require('assets/createMatchPage/dayGlow.png');
 const CHOSEDAYS = require('assets/createMatchPage/chooseDays.png');
 
+const LEADERBOARD = require('assets/NavIcons/LeaderBoard.png');
+const MATCHES = require('assets/NavIcons/Matches.png');
+const NEWSFEED = require('assets/NavIcons/News-Feed.png');
+const SCOUT = require('assets/NavIcons/Scout.png');
+const TEAMS = require('assets/NavIcons/Teams.png');
 
 
 class CreateMatch extends Component {
@@ -129,22 +135,7 @@ class CreateMatch extends Component {
                 </TouchableOpacity>
               </ImageBackground>
           }
-
-
-
-
-          <View style={styles.navbar}>
-            <TouchableOpacity>
-              <Image source={RANK_NAV_ICON} style={styles.navItem}></Image>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Image source={EARTH_NAV_ICON} style={styles.earthItem}></Image>
-            </TouchableOpacity>
-
-            <TouchableOpacity>
-              <Image source={FOOTBALLCOURT_NAV_ICON} style={styles.footballCourt}></Image>
-            </TouchableOpacity>
-          </View>
+          <NavBar />
         </ImageBackground>
       </View>
     );

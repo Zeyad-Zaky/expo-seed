@@ -12,6 +12,7 @@ export class App extends React.Component {
       <SafeAreaView style={GlobalStyles.droidSafeArea}>
       <Provider store={store}>
         <Navigation />
+        
       </Provider>
       </SafeAreaView>
     );
