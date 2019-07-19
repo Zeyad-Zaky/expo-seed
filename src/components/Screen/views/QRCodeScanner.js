@@ -24,8 +24,14 @@ class QRCodeScannerScreen extends Component {
           style={styles.background}
           imageStyle={styles.backgroundImage}
         >
+          <View style={{ marginLeft: '-75%' }}>
+            <Text style={styles.pitch}>Pitch:</Text>
+            <Text style={styles.admin}>Admin:</Text>
+            <Text style={styles.time}>Starting Time:</Text>
+            <Text style={styles.duration}>Duration:</Text>
+          </View>
+
           <View>
-            <Image source={QRCODE_FRAME} style={styles.qrcodeFrame} />
             <Image source={QRCODE} style={styles.qrcode} />
           </View>
 
