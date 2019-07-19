@@ -4,7 +4,6 @@ export default StyleSheet.create({
   container: {
     width: '100%',
     height: 70,
-    alignItems: 'center',
     justifyContent: 'space-between',
     position: 'absolute',
     top: 0,
@@ -17,5 +16,11 @@ export default StyleSheet.create({
   playercard: { width: '80%' },
   playercardImage: { width: '100%' },
   profilepicture: {},
-  menu: { width: '10%' },
+  menuLogoContainer: {
+    flex: 1,
+    alignItems: 'center',
+    height: '60%',
+    justifyContent: 'center',
+  },
+  menuLogo: { width: 30, height: 30 },
 });
