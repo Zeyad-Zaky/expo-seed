@@ -1,13 +1,15 @@
 import React from 'react';
-import { View, Text, ImageBackground, Image, TouchableOpacity, Dimensions } from 'react-native';
-import Svg, { Polygon, Path } from 'react-native-svg';
+import { View, Text, ImageBackground, TouchableOpacity, Dimensions } from 'react-native';
+import Svg, { Image, Path, Defs, ClipPath } from 'react-native-svg';
 import styles from './styles';
 
 const { width, height } = Dimensions.get('window');
 
-const PIC_FRAME_LOGO = require('assets/QRCodeScannerPage/PICFrame.png'); // USED
-const MENU_LOGO = require('assets/QRCodeScannerPage/MENU.png'); // USED
-const PLAYER_CARD_LOGO = require('assets/QRCodeScannerPage/PlayerCard.png'); // USED
+const BACKGROUND_HEADER = require('assets/header_background.png'); // USED
+const MENU_LOGO = require('assets/QRCodeScannerPage/MENU.png');
+// USED
+const PLAYER_CARD_LOGO =
+  'https://sa.kapamilya.com/absnews/abscbnnews/media/2018/sports/10/06/20181006-ronaldo.jpg'; // USED
 
 const getPathSingleCommand = (first, ind) => {
   const bottomDifference = 30;
@@ -96,8 +98,33 @@ const HeaderComponent = props => {
             width: width * 0.7,
           }}
         >
+          <Defs>
+            <ClipPath id="clip">
+              <Path d={getFirstPathCommands()} fill="red" strokeWidth={0} />
+              <Path d={getSecondPathCommands()} fill="red" strokeWidth={0} />
+            </ClipPath>
+          </Defs>
           <Path d={getFirstPathCommands()} fill="red" strokeWidth={0} />
           <Path d={getSecondPathCommands()} fill="red" strokeWidth={0} />
+          <Image
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+            preserveAspectRatio="none"
+            href={BACKGROUND_HEADER}
+            clipPath="url(#clip)"
+          />
+          <Image
+            x="0%"
+            y="0%"
+            width="30%"
+            height="100%"
+            preserveAspectRatio="xMidYMid slice"
+            href={PLAYER_CARD_LOGO}
+            clipPath="url(#clip)"
+            resizeMode="cover"
+          />
         </Svg>
       </View>
       <TouchableOpacity />
