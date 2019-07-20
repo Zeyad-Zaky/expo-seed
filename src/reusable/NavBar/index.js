@@ -18,17 +18,18 @@ class CreateMatch extends Component {
       <Image source={LEADERBOARD} style={styles.navItem}></Image>
     </TouchableOpacity>
     <TouchableOpacity>
-      <Image source={MATCHES} style={styles.navItem}></Image>
+      <Image source={TEAMS} style={styles.navItem}></Image>
     </TouchableOpacity>
     <TouchableOpacity>
       <Image source={NEWSFEED} style={styles.navItem}></Image>
     </TouchableOpacity>
     <TouchableOpacity>
-      <Image source={SCOUT} style={styles.navItem}></Image>
+      <Image source={MATCHES} style={styles.navItem}></Image>
     </TouchableOpacity>
     <TouchableOpacity>
-      <Image source={TEAMS} style={styles.navItem}></Image>
+      <Image source={SCOUT} style={styles.navItem}></Image>
     </TouchableOpacity>
+
   </View>
     );
   }
