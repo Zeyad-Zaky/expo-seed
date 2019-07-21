@@ -4,8 +4,6 @@ import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-nat
 
 export default StyleSheet.create({
   container: {
-    borderWidth:3,
-
     flex: 1,
     alignItems: 'flex-start',
     flexDirection: 'row',

@@ -1,10 +1,15 @@
 import React from 'react';
-import ScreenScreen from './views/MyMatches';
+import ScreenScreen from './views/Register';
 
 
-export const Screen = () => {
-  return <ScreenScreen />
-  ;
-};
+class Screen extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <ScreenScreen />;
+  }
+}
 
 export default Screen;

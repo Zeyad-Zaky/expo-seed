@@ -42,22 +42,21 @@ class CreateMatch extends Component {
 
  }
 
-  changeContainerPitch()
-  {
-    this.setState({
-      isPitchContainer: true
-    })
+ changeContainerPitch()
+ {
+   this.setState({
+     isPitchContainer: true
+   })
 
-  }
-  changeContainerDay()
-  {
+ }
+ changeContainerDay()
+ {
 
-    this.setState({
-      isPitchContainer: false
-    })
-  }
-
-  render() {
+   this.setState({
+     isPitchContainer: false
+   })
+ }
+ render() {
     return (
 
       <View style={styles.container}>
