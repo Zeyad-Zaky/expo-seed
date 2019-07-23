@@ -1,5 +1,5 @@
 import React from 'react';
-import ScreenScreen from './views/Register';
+import ScreenScreen from './views/Welcome';
 
 
 class Screen extends React.Component {
