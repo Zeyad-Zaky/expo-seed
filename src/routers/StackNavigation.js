@@ -14,6 +14,13 @@ const StackNavigation = createStackNavigator(
   },
   {
     headerMode: 'float',
+    cardStyle: { backgroundColor: 'transparent' },
+    transitionConfig: () => ({
+      containerStyle: {
+        backgroundColor: 'transparent',
+      },
+    }),
+    transparentCard: true,
   }
 );
 

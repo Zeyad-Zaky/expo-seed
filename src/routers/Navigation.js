@@ -1,12 +1,12 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import Loader from 'components/Loader';
 import TabNavigation from './TabNavigation';
-import StackNavigation from './StackNavigation';
+import DrawerNavigation from './DrawerNavigation';
 
 const Navigation = createAppContainer(
   createSwitchNavigator({
     loading: Loader,
-    StackNavigation,
+    DrawerNavigation,
   })
 );
 
