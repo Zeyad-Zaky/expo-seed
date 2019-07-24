@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { StatusBar, Platform } from 'react-native';
 import colors from 'styles/colors';
-import { Font, Asset, Permissions, SplashScreen } from 'expo';
+import * as Font from 'expo-font';
 import LoaderScreen from './views/LoaderScreen';
 
 class Loader extends Component {

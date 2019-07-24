@@ -10,14 +10,14 @@ const PLAYER_CARD_LOGO =
   'https://sa.kapamilya.com/absnews/abscbnnews/media/2018/sports/10/06/20181006-ronaldo.jpg'; // USED
 
 const GLOBAL_BOTTOM_DIFFERENCE = 20;
-const GLOBAL_MID_HEIGHT = 30;
-const GLOBAL_FULL_WIDTH = width * 0.7;
-const GLOBAL_MAXIMUM_HEIGHT = 45;
+const GLOBAL_MID_HEIGHT = 32;
+const GLOBAL_MAXIMUM_WIDTH = width * 0.7;
+const GLOBAL_MAXIMUM_HEIGHT = 48;
 
 const getFirstPathSingleCommand = ind => {
   const START_TOP_X = 0;
   const START_BOTTOM_X = GLOBAL_BOTTOM_DIFFERENCE;
-  const END_TOP_X = GLOBAL_FULL_WIDTH;
+  const END_TOP_X = GLOBAL_MAXIMUM_WIDTH;
   const END_BOTTOM_X = END_TOP_X - GLOBAL_BOTTOM_DIFFERENCE;
 
   const LEFT_START_END_X = START_TOP_X + (START_BOTTOM_X - START_TOP_X) / 2;
@@ -43,10 +43,10 @@ const getFirstPathSingleCommand = ind => {
   }
 };
 const getSecondPathSingleCommand = ind => {
-  const START_TOP_X = GLOBAL_FULL_WIDTH * 0.4;
+  const START_TOP_X = GLOBAL_MAXIMUM_WIDTH * 0.4;
   const START_BOTTOM_X = START_TOP_X + GLOBAL_BOTTOM_DIFFERENCE * 0.5;
-  const END_TOP_X = GLOBAL_FULL_WIDTH - GLOBAL_BOTTOM_DIFFERENCE * 1.5;
-  const END_BOTTOM_X = GLOBAL_FULL_WIDTH - GLOBAL_BOTTOM_DIFFERENCE * 2;
+  const END_TOP_X = GLOBAL_MAXIMUM_WIDTH - GLOBAL_BOTTOM_DIFFERENCE * 1.5;
+  const END_BOTTOM_X = GLOBAL_MAXIMUM_WIDTH - GLOBAL_BOTTOM_DIFFERENCE * 2;
 
   const LEFT_START_END_X = START_TOP_X + (START_BOTTOM_X - START_TOP_X) / 2;
   const RIGHT_START_END_X = END_BOTTOM_X + (END_TOP_X - END_BOTTOM_X) / 2;
@@ -91,7 +91,7 @@ const getSecondPathCommands = () =>
   )} ${getSecondPathSingleCommand(3)}`;
 
 const getRightCurveCommands = () => {
-  const END_X = GLOBAL_FULL_WIDTH * 0.295;
+  const END_X = GLOBAL_MAXIMUM_WIDTH * 0.295;
   const MID_X = END_X + 4;
   const MID_Y = GLOBAL_MID_HEIGHT * 0.5;
   const firstPoint = `${END_X},${0}`;
