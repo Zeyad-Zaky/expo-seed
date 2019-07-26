@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, ImageBackground, Image, TouchableOpacity, Dimensions, StyleSheet } from "react-native";
-// import styles from "../styles/MatchInfoStyles";
+import styles from "../styles/MatchInfoStyles";
 
 
 const BACKGROUND = require("assets/matchInfoPage/BG.png");
@@ -32,11 +32,29 @@ export default class matchInfoScreen extends Component {
     matchPrice: 100,
     payementMethod: "Cash",
     pitchLocation: "Nasr City",
-    pitchName: "elwafaa wel amal",
-    adminName: "Omar",
-    player1name: "Salah",
-    player2name: "Ronaldo",
-    player3name: "Messi"
+    pitchName: "elwafaa wl amal",
+    // adminName: "Omar",
+    player1: {
+      firstName: "Omar",
+      level: 17,
+      photo: ADMIN
+    },
+    player2: {
+      firstName: "Salah",
+      level: 19,
+      photo: PLAYER1
+    },
+    player3: {
+      firstName: "Ronaldo",
+      level: 20,
+      photo: PLAYER2
+    },
+    player4: {
+      firstName: "Messi",
+      level: 19,
+      photo: PLAYER3
+    }
+
   };
 
   render() {
@@ -76,7 +94,7 @@ export default class matchInfoScreen extends Component {
           <View style={styles.overviewViewContainer}>
             <ImageBackground source={MATCH_OVERVIEW_CARD} style={styles.overviewContainer} imageStyle={styles.overview}>
 
-              <View style={styles.overviewDetails3}>
+              <View style={styles.overviewDetails1}>
                 <Text style={styles.overviewTextArticle}>
                   Match Overview
                 </Text>
@@ -134,7 +152,7 @@ export default class matchInfoScreen extends Component {
                 </Text>
               </View>
 
-              <View style={styles.overviewDetails1}>
+              <View style={styles.overviewDetails3}>
                 <Text style={styles.overviewTextWhite}>
                   Payment Method:{" "}
                 </Text>
@@ -147,22 +165,106 @@ export default class matchInfoScreen extends Component {
           </View>
 
 
-          <ImageBackground source={PLAYERS_CARD} style={styles.playersContainer} imageStyle={styles.overview}>
+          <ImageBackground source={PLAYERS_CARD} style={styles.playersCardContainer} imageStyle={styles.overview}>
 
-            <View style={styles.overviewDetails3}>
+
+            <View style={styles.overviewDetails1}>
               <Text style={styles.overviewTextArticle}>
                 View Players
               </Text>
-              {/*<Text style={{ height:"100%", width:"100%"}}/>*/}
             </View>
 
-            <View style={styles.playersView}>
-              {/*<ImageBackground style={styles.playersBackground}>*/}
-              {/*</ImageBackground>*/}
+            <View style={styles.playersContainer}>
 
-              {/*<View style={{height: "100%", width:"20%"}}>*/}
-              {/*  <Text style={{ height:"100%", width:"100%"}}/>*/}
-              {/*</View>*/}
+
+              <View style={styles.playerCard}>
+                <ImageBackground source={this.state.player1.photo} style={styles.playerImageContainer}
+                                 imageStyle={styles.playerImage}>
+                  <ImageBackground source={LEVEL} style={styles.playerLevelContainer}
+                                   imageStyle={styles.playerLevelImage}>
+                    <View style={styles.playerLevelTextContainer}>
+                      <Text style={styles.playerLevelText}>
+                        {this.state.player1.level}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+
+                </ImageBackground>
+                <View style={styles.playerName}>
+                  <Text style={styles.playerNameText}>
+                    {this.state.player1.firstName}
+                  </Text>
+                </View>
+
+              </View>
+
+
+              <View style={styles.playerCard}>
+                <ImageBackground source={this.state.player2.photo} style={styles.playerImageContainer}
+                                 imageStyle={styles.playerImage}>
+                  <ImageBackground source={LEVEL} style={styles.playerLevelContainer}
+                                   imageStyle={styles.playerLevelImage}>
+                    <View style={styles.playerLevelTextContainer}>
+                      <Text style={styles.playerLevelText}>
+                        {this.state.player2.level}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+
+                </ImageBackground>
+                <View style={styles.playerName}>
+                  <Text style={styles.playerNameText}>
+                    {this.state.player2.firstName}
+                  </Text>
+                </View>
+
+              </View>
+
+
+              <View style={styles.playerCard}>
+                <ImageBackground source={this.state.player3.photo} style={styles.playerImageContainer}
+                                 imageStyle={styles.playerImage}>
+                  <ImageBackground source={LEVEL} style={styles.playerLevelContainer}
+                                   imageStyle={styles.playerLevelImage}>
+                    <View style={styles.playerLevelTextContainer}>
+                      <Text style={styles.playerLevelText}>
+                        {this.state.player3.level}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+
+                </ImageBackground>
+                <View style={styles.playerName}>
+                  <Text style={styles.playerNameText}>
+                    {this.state.player3.firstName}
+                  </Text>
+                </View>
+
+              </View>
+
+
+              <View style={styles.playerCard}>
+                <ImageBackground source={this.state.player4.photo} style={styles.playerImageContainer}
+                                 imageStyle={styles.playerImage}>
+                  <ImageBackground source={LEVEL} style={styles.playerLevelContainer}
+                                   imageStyle={styles.playerLevelImage}>
+                    <View style={styles.playerLevelTextContainer}>
+                      <Text style={styles.playerLevelText}>
+                        {this.state.player4.level}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+
+                </ImageBackground>
+                <View style={styles.playerName}>
+                  <Text style={styles.playerNameText}>
+                    {this.state.player4.firstName}
+
+                  </Text>
+                </View>
+
+              </View>
+
 
             </View>
 
@@ -170,7 +272,8 @@ export default class matchInfoScreen extends Component {
 
 
           <View style={styles.requestButtonViewContainer}>
-            <ImageBackground source={REQUEST_BUTTON} style={styles.requestButtonContainer} imageStyle={styles.overview}>
+            <ImageBackground source={REQUEST_BUTTON} style={styles.requestButtonContainer}
+                             imageStyle={styles.requestShape}>
               <View style={styles.requestButton}>
                 <Text style={styles.request}>
                   Request
@@ -189,170 +292,3 @@ export default class matchInfoScreen extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-
-  container: {
-    flex: 1
-  },
-  background: {
-    flex: 1,
-    alignItems: "center"
-    // justifyContent: "center"
-  },
-  backgroundImage: {
-    resizeMode: "stretch"
-  },
-  upBar: {
-    height: "9.2%",
-    width: "100%"
-  },
-  matchContainer: {
-    height: "7.8%",
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  match: {
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: Dimensions.get("window").width / 15,
-    color: "#fff",
-    height: "60%"
-  },
-  separator: {
-    width: "50%",
-    height: "7%"
-    // borderWidth: 1
-  },
-  coverContainer: {
-    // flex: 1,
-    height: "22%",
-    width: "80%",
-    alignItems: "flex-end",
-    justifyContent: "flex-end"
-  },
-  cover: {
-    // flex: 1,
-    height: "100%",
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 10
-  },
-  pitchNameContainer: {
-    width: "42.5%",
-    height: "11.5%",
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  pitchName: {
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: Dimensions.get("window").width / 37,
-    color: "#fff"
-    // width: "100%",
-    // height: "100%",
-  },
-  overviewViewContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    height: "22%",
-    width: "85%"
-  },
-  overviewContainer: {
-    alignItems: "flex-end",
-    justifyContent: "flex-end",
-    height: "90%",
-    width: "100%"
-  },
-  overview: {
-    borderRadius: 10,
-    height: "100%",
-    width: "100%"
-  },
-  overviewDetails1: {
-    height: "23%",
-    width: "95%",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    flexDirection: "row"
-
-  },
-  overviewDetails2: {
-    height: "19%",
-    width: "95%",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    flexDirection: "row"
-
-  },
-  overviewDetails3: {
-    height: "20%",
-    width: "95%",
-    alignItems: "flex-start",
-    justifyContent: "center"
-  },
-  overviewTextArticle: {
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: Dimensions.get("window").width / 25,
-    color: "#000000"
-
-  },
-  overviewTextWhite: {
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: Dimensions.get("window").width / 20,
-    color: "#fff"
-  },
-  overviewTextYellow: {
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: Dimensions.get("window").width / 20,
-    color: "#efc41c"
-  },
-  playersContainer: {
-    alignItems: "flex-end",
-    // justifyContent: "flex-end",
-    height: "20%",
-    width: "85%"
-  },
-  playersView:{
-    height: "80%",
-    width: "85%",
-  },
-  playersBackground:{
-
-  },
-  playersBackgroundImage:{
-
-  },
-  requestButtonViewContainer: {
-    height: "10%",
-    width: "40%",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  requestButtonContainer: {
-    height: "50%",
-    width: "100%"
-  },
-  requestButton: {
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  request: {
-    height: "100%",
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: Dimensions.get("window").width / 15,
-    color: "#fff"
-  },
-  buttomBar: {
-    height: "9.2%",
-    width: "100%"
-  }
-
-
-});
