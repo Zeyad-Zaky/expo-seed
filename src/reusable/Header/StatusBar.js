@@ -9,10 +9,10 @@ const BACKGROUND_HEADER = require('assets/header_background.png');
 const PLAYER_CARD_LOGO =
   'https://sa.kapamilya.com/absnews/abscbnnews/media/2018/sports/10/06/20181006-ronaldo.jpg'; // USED
 
-const GLOBAL_BOTTOM_DIFFERENCE = 20;
+const GLOBAL_BOTTOM_DIFFERENCE = 30;
 const GLOBAL_MID_HEIGHT = 32;
 const GLOBAL_MAXIMUM_WIDTH = width * 0.7;
-const GLOBAL_MAXIMUM_HEIGHT = 48;
+const GLOBAL_MAXIMUM_HEIGHT = 50;
 
 const getFirstPathSingleCommand = ind => {
   const START_TOP_X = 0;

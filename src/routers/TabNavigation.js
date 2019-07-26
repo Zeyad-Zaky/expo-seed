@@ -2,10 +2,10 @@ import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation';
 import { Dimensions } from 'react-native';
 import colors from 'styles/colors';
-import Screen from 'components/Screen';
 import FontAwesome from '../reusable/FontAwesome';
 
 import StackNavigation from './StackNavigation';
+import MatchStack from './MatchStack';
 
 const { width } = Dimensions.get('window');
 const routeIcons = {
@@ -27,7 +27,7 @@ const TabNavigation = createBottomTabNavigator(
       screen: StackNavigation,
     },
     Field: {
-      screen: StackNavigation,
+      screen: MatchStack,
     },
     People: {
       screen: StackNavigation,

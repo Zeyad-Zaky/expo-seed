@@ -5,12 +5,15 @@ import colors from 'styles/colors';
 import * as Font from 'expo-font';
 import LoaderScreen from './views/LoaderScreen';
 
+const bold = require('assets/fonts/Linotype/Linotype-Bold.ttf');
+
 class Loader extends Component {
   async componentDidMount() {
     const { navigation } = this.props;
     await Font.loadAsync({
       'font-awesome-solid': require('assets/fonts/font-awesome/font-awesome-solid.otf'),
       'font-awesome-light': require('assets/fonts/font-awesome/font-awesome-light.otf'),
+      bold,
     });
 
     if (Platform.OS === 'android') {

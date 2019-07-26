@@ -13,7 +13,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   backgroundImage: {
-   resizeMode: 'stretch',
+    resizeMode: 'stretch',
   },
   topBar: {
     maxHeight: '12%',
@@ -85,5 +85,5 @@ export default StyleSheet.create({
     width: 50,
     height: 37,
     resizeMode: 'stretch',
-  }
+  },
 });

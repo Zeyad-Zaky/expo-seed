@@ -8,7 +8,7 @@ import GlobalStyles from './src/components/Screen/styles/GlobalStyles';
 
 useScreens();
 const BACKGROUND = require('assets/QRCodeScannerPage/BG.png');
-// USED
+
 export class App extends PureComponent {
   render() {
     return (
