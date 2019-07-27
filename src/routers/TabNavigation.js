@@ -45,6 +45,7 @@ const TabNavigation = createBottomTabNavigator(
       ),
     }),
     headerMode: 'none',
+    transparentCard: false,
     swipeEnabled: true,
     tabBarOptions: {
       style: {
