@@ -55,7 +55,7 @@ const MatchStack = createStackNavigator(
         backgroundColor: 'transparent',
       },
     }),
-    transparentCard: true,
+    transparentCard: false,
   }
 );
 

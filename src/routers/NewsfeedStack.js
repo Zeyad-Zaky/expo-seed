@@ -20,7 +20,7 @@ const StackNavigation = createStackNavigator(
         backgroundColor: 'transparent',
       },
     }),
-    transparentCard: true,
+    transparentCard: false,
   }
 );
 
