@@ -51,7 +51,7 @@ class MatchScreen extends Component {
     return (
       <View style={styles.container}>
         <ImageBackground
-          source={require('../../../assets/newsfeedPage/BG.png')}
+          source={require('../../../assets/createMatchPage/BG.png')}
           style={styles.background}
         >
           {/* <View style={styles.topBar}>

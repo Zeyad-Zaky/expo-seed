@@ -35,7 +35,7 @@ class LoginScreen extends Component {
     }
     presshandeler = () => {
       const {navigation} = this.props;
-      navigation.navigate('joinMatches');
+      navigation.navigate('Newsfeed');
     };  
 
   render() {
