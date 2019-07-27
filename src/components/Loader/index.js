@@ -22,7 +22,7 @@ class Loader extends Component {
       StatusBar.setBarStyle('dark-content');
     }
 
-    navigation.navigate('main');
+    navigation.navigate('login');
 
     if (Platform.OS === 'android') StatusBar.setBackgroundColor('white', true);
   }

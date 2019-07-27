@@ -51,7 +51,7 @@ class NewsfeedScreen extends Component {
           style={styles.background}
           imageStyle={styles.backgroundImage}
         >
-          <View style={styles.topBar}>
+          {/* <View style={styles.topBar}>
             <TouchableOpacity>
               <Image source={MENU_LOGO} style={styles.menu}></Image>
             </TouchableOpacity>
@@ -63,11 +63,11 @@ class NewsfeedScreen extends Component {
               <Image source={PIC_FRAME_LOGO} style={styles.profilepicture}></Image>
               <Text style={styles.username}>{this.NewsfeedScreenstate.userName}</Text>
             </ImageBackground>
-          </View>
+          </View> */}
           <View style={styles.newsfeed}>
             <NewsfeedList newsfeed={this.NewsfeedScreenstate.newsfeed} />
           </View>
-          <View style={styles.navbar}>
+          {/* <View style={styles.navbar}>
             <TouchableOpacity>
               <Image source={RANK_NAV_ICON} style={styles.navItem}></Image>
             </TouchableOpacity>
@@ -77,7 +77,7 @@ class NewsfeedScreen extends Component {
             <TouchableOpacity>
               <Image source={FOOTBALLCOURT_NAV_ICON} style={styles.footballCourt}></Image>
             </TouchableOpacity>
-          </View>
+          </View> */}
         </ImageBackground>
       </View>
     );

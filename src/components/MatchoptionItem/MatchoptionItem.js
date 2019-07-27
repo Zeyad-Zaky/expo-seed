@@ -1,8 +1,25 @@
 import React from "react";
 import {StyleSheet, TouchableOpacity, Image, ImageBackground, Text, View} from "react-native";
+import { withNavigation } from 'react-navigation';
+
+page = props => {
+  switch (props.title) {
+    case 'Start Match':
+      props.navigation.navigate('qrCodeScanner');
+      break;
+    case 'Create Match':
+      props.navigation.navigate('createMatch');
+      break;
+    case 'Join Match':
+      props.navigation.navigate('joinMatches');
+      break;
+    default:
+      break;
+  }
+};
 
 const MatchoptionItem = props => (
-  <TouchableOpacity>
+  <TouchableOpacity onPress={() => this.page(props)}>
     <ImageBackground source={props.image} style={styles.matchoptionItem} imageStyle={styles.matchoptionImage}>
     <Text style={styles.title}>{props.title}</Text>
     <Text style={styles.content}>{props.content}</Text>
@@ -35,4 +52,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default MatchoptionItem;
+export default withNavigation(MatchoptionItem);

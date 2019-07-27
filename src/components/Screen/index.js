@@ -1,5 +1,5 @@
 import React from 'react';
-import ScreenScreen from './views/QRCodeScanner';
+import ScreenScreen from './views/Login';
 
 export const Screen = () => {
   return <ScreenScreen />;

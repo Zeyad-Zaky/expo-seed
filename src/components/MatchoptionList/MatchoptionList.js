@@ -9,7 +9,7 @@ const MatchoptionList = props => {
       style={styles.listContainer}
       data={props.matchoption}
       renderItem={(info) => (
-        <MatchoptionItem image={info.item.image} title={info.item.title} content={info.item.content}/>
+        <MatchoptionItem key={info.item.key} image={info.item.image} title={info.item.title} content={info.item.content}/>
       )}
     /> 
   );

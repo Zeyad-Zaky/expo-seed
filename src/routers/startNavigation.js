@@ -1,19 +1,14 @@
-import React from 'react';
 import { createStackNavigator } from 'react-navigation';
-import Header from 'reusable/Header';
-import Screen from 'components/Screen';
+import Login from '../components/Screen/views/Login';
 
 const StackNavigation = createStackNavigator(
   {
-    main: {
-      screen: Screen,
-      navigationOptions: {
-        header: () => <Header title="Sign In" />,
-      },
+    login: {
+      screen: Login,
     },
   },
   {
-    headerMode: 'float',
+    headerMode: 'none',
     cardStyle: { backgroundColor: 'transparent' },
     transitionConfig: () => ({
       containerStyle: {

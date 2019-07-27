@@ -4,7 +4,7 @@ import styles from '../styles/MatchStyles';
 import MatchoptionList from '../../MatchoptionList/MatchoptionList';
 
 class MatchScreen extends Component {
-  state = {
+  MatchScreenstate = {
     userName: 'Zeyad_Zaky',
     color: true,
     matchoption: [
@@ -37,12 +37,14 @@ class MatchScreen extends Component {
   };
 
   buttonHandler = () => {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        color: !prevState.color,
-      };
-    });
+    this.MatchScreenstate.color = !this.MatchScreenstate.color;
+    // this.setState(prevState => {
+    //   console.log(prevState);
+    //   return {
+    //     ...prevState,
+    //     color: !prevState.color,
+    //   };
+    // });
   };
 
   render() {
@@ -52,7 +54,7 @@ class MatchScreen extends Component {
           source={require('../../../assets/newsfeedPage/BG.png')}
           style={styles.background}
         >
-          <View style={styles.topBar}>
+          {/* <View style={styles.topBar}>
             <TouchableOpacity>
               <Image
                 source={require('../../../assets/newsfeedPage/MENU.png')}
@@ -70,15 +72,25 @@ class MatchScreen extends Component {
               ></Image>
               <Text style={styles.username}>{this.state.userName}</Text>
             </ImageBackground>
-          </View>
-          <View style={styles.optionsBar} disabled={this.state.color}>
-            <TouchableOpacity onPress={() => this.buttonHandler()}>
-              <Text style={[styles.option, { color: this.state.color ? 'white' : 'grey' }]}>
+          </View> */}
+          <View style={styles.optionsBar}>
+            <TouchableOpacity
+              onPress={() => this.buttonHandler()}
+              disabled={this.MatchScreenstate.color}
+            >
+              <Text
+                style={[styles.option, { color: this.MatchScreenstate.color ? 'white' : 'grey' }]}
+              >
                 QuickMatch
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.buttonHandler()} disabled={!this.state.color}>
-              <Text style={[styles.option, { color: this.state.color ? 'grey' : 'white' }]}>
+            <TouchableOpacity
+              onPress={() => this.buttonHandler()}
+              disabled={!this.MatchScreenstate.color}
+            >
+              <Text
+                style={[styles.option, { color: this.MatchScreenstate.color ? 'grey' : 'white' }]}
+              >
                 RankedMatch
               </Text>
             </TouchableOpacity>
@@ -88,9 +100,9 @@ class MatchScreen extends Component {
             style={styles.seperator}
           ></Image>
           <View style={styles.matchOptions}>
-            <MatchoptionList matchoption={this.state.matchoption}></MatchoptionList>
+            <MatchoptionList matchoption={this.MatchScreenstate.matchoption}></MatchoptionList>
           </View>
-          <View style={styles.navbar}>
+          {/* <View style={styles.navbar}>
             <TouchableOpacity>
               <Image
                 source={require('../../../assets/newsfeedPage/Rank_nav.png')}
@@ -109,7 +121,7 @@ class MatchScreen extends Component {
                 style={styles.footballCourt}
               ></Image>
             </TouchableOpacity>
-          </View>
+          </View> */}
         </ImageBackground>
       </View>
     );

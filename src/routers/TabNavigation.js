@@ -4,33 +4,34 @@ import { Dimensions } from 'react-native';
 import colors from 'styles/colors';
 import FontAwesome from '../reusable/FontAwesome';
 
-import StackNavigation from './StackNavigation';
+import LeaderboardNavigation from './LeaderboardNavigation';
+import NewsfeedStack from './NewsfeedStack';
 import MatchStack from './MatchStack';
 
 const { width } = Dimensions.get('window');
 const routeIcons = {
-  Home: 'analytics',
-  Messages: 'comments-alt',
-  Globe: 'globe-americas',
-  Field: 'gamepad',
-  People: 'users',
+  Leaderboard: 'analytics',
+  Teams: 'comments-alt',
+  Newsfeed: 'globe-americas',
+  Matches: 'gamepad',
+  Scout: 'users',
 };
 const TabNavigation = createBottomTabNavigator(
   {
-    Home: {
-      screen: StackNavigation,
+    Leaderboard: {
+      screen: LeaderboardNavigation,
     },
-    Messages: {
-      screen: StackNavigation,
+    Teams: {
+      screen: LeaderboardNavigation,
     },
-    Globe: {
-      screen: StackNavigation,
+    Newsfeed: {
+      screen: NewsfeedStack,
     },
-    Field: {
+    Matches: {
       screen: MatchStack,
     },
-    People: {
-      screen: StackNavigation,
+    Scout: {
+      screen: LeaderboardNavigation,
     },
   },
   {

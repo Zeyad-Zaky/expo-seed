@@ -53,7 +53,7 @@ class RankScreen extends Component {
           source={require('../../../assets/newsfeedPage/BG.png')}
           style={styles.background}
         >
-          <View style={styles.topBar}>
+          {/* <View style={styles.topBar}>
             <TouchableOpacity>
               <Image
                 source={require('../../../assets/newsfeedPage/MENU.png')}
@@ -69,7 +69,7 @@ class RankScreen extends Component {
                 source={require('../../../assets/newsfeedPage/PICFrame.png')}
                 style={styles.profilepicture}
               ></Image>
-              <Text style={styles.username}>{this.state.userName}</Text>
+              <Text style={styles.username}>{this.RankScreenstate.userName}</Text>
             </ImageBackground>
           </View>
           <View style={styles.optionsBar}>
@@ -91,12 +91,12 @@ class RankScreen extends Component {
                 style={styles.optionsItem}
               ></Image>
             </TouchableOpacity>
-          </View>
+          </View> */}
           <Image source={require('../../../assets/rankPage/Map.png')} style={styles.map}></Image>
           <View style={styles.leaderboard}>
-            <LeaderboardList leaderboard={this.state.leaderboard}></LeaderboardList>
+            <LeaderboardList leaderboard={this.RankScreenstate.leaderboard}></LeaderboardList>
           </View>
-          <View style={styles.navbar}>
+          {/* <View style={styles.navbar}>
             <TouchableOpacity>
               <Image
                 source={require('../../../assets/newsfeedPage/Rank_nav.png')}
@@ -115,7 +115,7 @@ class RankScreen extends Component {
                 style={styles.navItem}
               ></Image>
             </TouchableOpacity>
-          </View>
+          </View> */}
         </ImageBackground>
       </View>
     );
