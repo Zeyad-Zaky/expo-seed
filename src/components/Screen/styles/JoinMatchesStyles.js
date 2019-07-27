@@ -15,7 +15,6 @@ export default StyleSheet.create({
     width: '100%',
     height: '100%',
     alignItems: 'center',
-    justifyContent: 'space-between',
   },
   backgroundImage: {
     resizeMode: 'stretch',
@@ -41,13 +40,14 @@ export default StyleSheet.create({
     right: '40%',
   },
   PageView:{
+    maxHeight: '85%',
     height: '100%',
     width: '100%',
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    bottom:'5%',
+    top:'5%',
   },
   searchBar:{
     maxHeight: '7%',

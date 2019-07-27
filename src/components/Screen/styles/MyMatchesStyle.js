@@ -37,13 +37,14 @@ export default StyleSheet.create({
     right: '40%',
   },
   PageView: {
+    maxHeight: '80%',
     height: '100%',
     width: '100%',
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    bottom: '5%',
+    top: '10%',
   },
   sep: {
     maxHeight: '7%',
