@@ -11,7 +11,9 @@ export default StyleSheet.create({
     height: '100%',
   },
   backgroundImage: {
-    resizeMode: 'stretch',
+    // resizeMode: 'stretch',
+    flex: 1,
+    alignItems: 'center',
   },
   topBar: {
     maxHeight: '10%',
@@ -68,6 +70,8 @@ export default StyleSheet.create({
   },
   map: {
     marginLeft: '10%',
+    marginTop: '15%',
+    marginBottom: '5%',
     maxWidth: '80%',
     maxHeight: '40%',
     resizeMode: 'stretch',

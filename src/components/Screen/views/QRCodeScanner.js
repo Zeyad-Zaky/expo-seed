@@ -9,8 +9,8 @@ import styles from '../styles/QRCodeStyles';
 // const PIC_FRAME_LOGO = require("assets/QRCodeScannerPage/PICFrame.png");                  //USED
 // const MENU_LOGO = require("assets/QRCodeScannerPage/MENU.png");                           //USED
 // const PLAYER_CARD_LOGO = require("assets/QRCodeScannerPage/PlayerCard.png");              //USED
-const BACKGROUND = require('assets/QRCodeScannerPage/BG.png');                            //USED
-const QRCODE = require('assets/QRCodeScannerPage/QR.png');                                //USED
+const BACKGROUND = require('assets/QRCodeScannerPage/BG.png'); //  USED
+const QRCODE = require('assets/QRCodeScannerPage/QR.png'); //  USED
 // const QRCODE_FRAME = require("assets/QRCodeScannerPage/frame.png");
 
 class QRCodeScannerScreen extends Component {
@@ -26,9 +26,7 @@ class QRCodeScannerScreen extends Component {
 
   render() {
     return (
-      <View
-        style={styles.container}
-      >
+      <View style={styles.container}>
         <ImageBackground
           source={BACKGROUND}
           style={styles.background}
@@ -47,19 +45,11 @@ class QRCodeScannerScreen extends Component {
               <Text style={styles.username}>{this.state.username}</Text>
             </ImageBackground>
           </View> */}
-          <View style={{marginLeft: "-75%"}}>
-            <Text style = {styles.pitch}>
-              Pitch:
-            </Text>
-            <Text style = {styles.admin}>
-              Admin:
-            </Text>
-            <Text style = {styles.time}>
-              Starting Time:
-            </Text>
-            <Text style = {styles.duration}>
-              Duration:
-            </Text>
+          <View style={{ marginLeft: '-75%' }}>
+            <Text style={styles.pitch}>Pitch:</Text>
+            <Text style={styles.admin}>Admin:</Text>
+            <Text style={styles.time}>Starting Time:</Text>
+            <Text style={styles.duration}>Duration:</Text>
           </View>
 
           <TouchableOpacity onPress={() => this.pressHandler()}>

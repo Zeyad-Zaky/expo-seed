@@ -11,7 +11,9 @@ export default StyleSheet.create({
     height: '100%',
   },
   backgroundImage: {
-    resizeMode: 'stretch',
+    // resizeMode: 'stretch',
+    flex: 1,
+    alignItems: 'center',
   },
   topBar: {
     maxHeight: '10%',
@@ -52,9 +54,9 @@ export default StyleSheet.create({
     color: 'yellow',
   },
   optionsBar: {
-    marginTop: '5%',
+    marginTop: '15%',
     marginLeft: '20%',
-    maxHeight: '6%',
+    maxHeight: '15%',
     width: '60%',
     flex: 1,
     flexDirection: 'row',
@@ -70,7 +72,7 @@ export default StyleSheet.create({
   },
   seperator: {
     position: 'absolute',
-    marginTop: '25%',
+    marginTop: '20%',
     marginLeft: '35%',
     maxWidth: '30%',
     maxHeight: '20%',
@@ -80,7 +82,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   matchOptions: {
-    marginTop: '9%',
+    // marginTop: '9%',
     maxHeight: '65%',
     width: '100%',
     flex: 1,
