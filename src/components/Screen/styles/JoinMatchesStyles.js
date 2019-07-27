@@ -47,7 +47,7 @@ export default StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    top:'5%',
+    top:'10%',
   },
   searchBar:{
     maxHeight: '7%',

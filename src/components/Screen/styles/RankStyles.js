@@ -2,16 +2,22 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
+    backgroundColor:'white',
+
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   background: {
+backgroundColor:'white',
     width: '100%',
     height: '100%',
   },
   backgroundImage: {
-    // resizeMode: 'stretch',
+    backgroundColor:'white',
+
+    resizeMode: 'stretch',
+
     flex: 1,
     alignItems: 'center',
   },

@@ -49,13 +49,14 @@ const TabNavigation = createBottomTabNavigator(
     swipeEnabled: true,
     tabBarOptions: {
       style: {
-        position: 'absolute',
+        //position: 'absolute',
         backgroundColor: 'transparent',
         bottom: 0,
         height: 60,
         width,
         borderTopWidth: 0,
         zIndex: 100000,
+        elevation: 30,
         right: 0,
         left: 0,
       },
